@@ -26,12 +26,14 @@ export interface StudentConstructor {
 }
 
 export interface StudentInterface {
+  firstName: string;
+  lastName: string;
   workOnHomework(): string;
   displayName(): string;
 }
 export class StudentClass implements StudentInterface {
-  private firstName: string;
-  private lastName: string;
+  firstName: string;
+  lastName: string;
 
   constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
