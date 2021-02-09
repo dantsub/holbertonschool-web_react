@@ -15,9 +15,9 @@ interface printTeacherFunction {
   (firstName: string, lastName: string) : string;
 }
 
-let printTeacher: printTeacherFunction;
-
-printTeacher = (firstName: string, lastName: string) : string => {
+export const printTeacher: printTeacherFunction = (
+  firstName: string,
+  lastName: string) : string => {
   return `${firstName[0]}. ${lastName}`;
 }
 
@@ -27,16 +27,20 @@ interface StudentConstructor {
 
 interface StudentInterface {
   workOnHomework(): string;
-  displayName(firstName: string): string;
+  displayName(): string;
 }
-const StudentClass: StudentConstructor = class StudentClass implements StudentInterface {
+export const StudentClass: StudentConstructor =
+class StudentClass implements StudentInterface {
+  public firstName: string;
+  public lastName: string;
+
   constructor(firstName: string, lastName: string) {}
 
   workOnHomework(): string {
     return 'Currently working';
   }
 
-  displayName(firstName: string): string {
-    return firstName;
+  displayName(): string {
+    return this.firstName;
   }
 }
