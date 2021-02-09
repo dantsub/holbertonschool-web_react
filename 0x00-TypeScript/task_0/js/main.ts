@@ -18,7 +18,7 @@ const student2: Student = {
   location: 'Medellín'
 };
 
-const studentsList: Student[] = [student1, student2];
+const studentsList: Array<Student> = [student1, student2];
 
 const tableHtml: HTMLTableElement = document.createElement('table');
 const theadHtml: HTMLTableSectionElement = document.createElement('thead');
