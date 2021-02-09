@@ -18,12 +18,12 @@ const student2: Student = {
   location: 'Medellín'
 };
 
-const studentsList = [student1, student2];
+const studentsList: Student[] = [student1, student2];
 
-const tableHtml = document.createElement('table');
+const tableHtml: HTMLTableElement = document.createElement('table');
 
 studentsList.forEach(student => {
-  const row = tableHtml.insertRow();
+  const row: HTMLTableRowElement = tableHtml.insertRow();
   row.insertCell(0).innerHTML = student.firstName;
   row.insertCell(1).innerHTML = student.location;
 });
