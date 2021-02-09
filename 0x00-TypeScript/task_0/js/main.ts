@@ -18,7 +18,7 @@ const student2: Student = {
   location: 'Medellín'
 };
 
-const studentsList: Array<Student> = [student1, student2];
+const studentsList: Student[] = [student1, student2];
 
 let tableHtml: string = `<table>
   <tr>
