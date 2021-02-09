@@ -20,6 +20,7 @@ const student2: Student = {
 
 const studentsList: Student[] = [student1, student2];
 
+const body: HTMLBodyElement = document.getElementsByTagName('body')[0]
 const tableHtml: HTMLTableElement = document.createElement('table');
 
 studentsList.forEach(student => {
@@ -28,4 +29,4 @@ studentsList.forEach(student => {
   row.insertCell(1).innerHTML = student.location;
 });
 
-document.body.appendChild(tableHtml);
+body.append(tableHtml);
