@@ -30,12 +30,12 @@ interface StudentInterface {
   displayName(): string;
 }
 export class StudentClass implements StudentInterface {
-  private _firstName: string;
-  private _lastName: string;
+  private firstName: string;
+  private lastName: string;
 
   constructor(firstName: string, lastName: string) {
-    this._firstName = firstName;
-    this._lastName = lastName;
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
 
   workOnHomework(): string {
@@ -43,6 +43,6 @@ export class StudentClass implements StudentInterface {
   }
 
   displayName(): string {
-    return this._firstName;
+    return this.firstName;
   }
 }
