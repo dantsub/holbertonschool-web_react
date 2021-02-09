@@ -21,17 +21,18 @@ export const printTeacher: printTeacherFunction = (
   return `${firstName[0]}. ${lastName}`;
 }
 
-export interface StudentConstructor {
+interface StudentConstructor {
   new (firstName: string, lastName: string): StudentInterface;
 }
 
-export interface StudentInterface {
+interface StudentInterface {
   firstName: string;
   lastName: string;
   workOnHomework(): string;
   displayName(): string;
 }
-export class StudentClass implements StudentInterface {
+export const StudentClass: StudentConstructor =
+class StudentClass implements StudentInterface {
   firstName: string;
   lastName: string;
 
