@@ -29,11 +29,15 @@ interface StudentInterface {
   workOnHomework(): string;
   displayName(): string;
 }
-export class StudentClass implements StudentInterface {
+export const StudentClass: StudentConstructor =
+class StudentClass implements StudentInterface {
   public firstName: string;
   public lastName: string;
 
-  constructor(firstName: string, lastName: string) {}
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
 
   workOnHomework(): string {
     return 'Currently working';
