@@ -20,13 +20,20 @@ const student2: Student = {
 
 const studentsList: Student[] = [student1, student2];
 
-const body: HTMLBodyElement = document.getElementsByTagName('body')[0]
 const tableHtml: HTMLTableElement = document.createElement('table');
+const theadHtml: HTMLTableSectionElement = document.createElement('thead');
+const tbodyHtml: HTMLTableSectionElement = document.createElement('tbody');
+
+const rowHeader: HTMLTableRowElement = theadHtml.insertRow();
+rowHeader.insertCell(0).innerHTML = 'firstName';
+rowHeader.insertCell(1).innerHTML = 'location';
+
+tableHtml.append(theadHtml);
 
 studentsList.forEach(student => {
-  const row: HTMLTableRowElement = tableHtml.insertRow();
+  const row: HTMLTableRowElement = tbodyHtml.insertRow();
   row.insertCell(0).innerHTML = student.firstName;
   row.insertCell(1).innerHTML = student.location;
 });
-
-body.append(tableHtml);
+tableHtml.append(tbodyHtml);
+document.body.appendChild(tableHtml);
