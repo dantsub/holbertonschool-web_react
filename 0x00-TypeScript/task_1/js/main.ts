@@ -29,8 +29,7 @@ interface StudentInterface {
   workOnHomework(): string;
   displayName(): string;
 }
-export const StudentClass: StudentConstructor =
-class StudentClass implements StudentInterface {
+export class StudentClass implements StudentInterface {
   public firstName: string;
   public lastName: string;
 
