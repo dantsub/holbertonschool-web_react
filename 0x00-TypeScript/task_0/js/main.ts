@@ -20,12 +20,7 @@ const student2: Student = {
 
 const studentsList: Student[] = [student1, student2];
 
-let tableHtml = `<table>
-  <tr>
-    <th>First name</th>
-    <th>Location</th>
-  </tr>
-`;
+let tableHtml = '<table>';
 
 studentsList.forEach(student => {
   tableHtml += `<tr>
