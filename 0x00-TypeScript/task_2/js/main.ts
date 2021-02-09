@@ -50,3 +50,9 @@ export function executeWork(employee: DirectorInterface | TeacherInterface): str
   console.log(employee.workTeacherTasks());
   return employee.workTeacherTasks();
 }
+
+type Subjects = 'Math' | 'History';
+
+export function teachClass(todayClass:Subjects): string {
+  return `Teaching ${todayClass}`;
+}
