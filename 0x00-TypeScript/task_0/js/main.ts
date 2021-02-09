@@ -18,7 +18,7 @@ const student2: Student = {
   location: 'Medellín'
 };
 
-const studentsList: Student[] = [student1, student2];
+const studentsList = [student1, student2];
 
 const tableHtml = document.createElement('table');
 
@@ -27,4 +27,5 @@ studentsList.forEach(student => {
   row.insertCell(0).innerHTML = student.firstName;
   row.insertCell(1).innerHTML = student.location;
 });
+
 document.body.appendChild(tableHtml);
