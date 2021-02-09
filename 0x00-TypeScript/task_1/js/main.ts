@@ -31,6 +31,7 @@ interface StudentInterface {
   workOnHomework(): string;
   displayName(): string;
 }
+
 export const StudentClass: StudentConstructor =
 class StudentClass implements StudentInterface {
   firstName: string;
