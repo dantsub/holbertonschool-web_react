@@ -25,7 +25,7 @@ export interface StudentConstructor {
   new (firstName: string, lastName: string): StudentInterface;
 }
 
-interface StudentInterface {
+export interface StudentInterface {
   workOnHomework(): string;
   displayName(): string;
 }
