@@ -25,7 +25,7 @@ interface StudentConstructor {
   new(firstName: string, lastName: string): StudentInterface;
 }
 
-interface StudentInterface {
+interface StudentClassInterface {
   firstName: string;
   lastName: string;
   workOnHomework(): string;
@@ -33,7 +33,7 @@ interface StudentInterface {
 }
 
 export const StudentClass: StudentConstructor =
-class StudentClass implements StudentInterface {
+class StudentClass implements StudentClassInterface {
   firstName: string;
   lastName: string;
 
