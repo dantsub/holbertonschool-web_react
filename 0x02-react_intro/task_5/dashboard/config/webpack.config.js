@@ -3,10 +3,6 @@ const path = require('path');
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
-  performance: {
-    maxAssetSize: 1000000,
-    maxEntrypointSize: 1000000,
-  },
   output: {
     filename: 'bundle.js',
     path: path.resolve('./dist'),
