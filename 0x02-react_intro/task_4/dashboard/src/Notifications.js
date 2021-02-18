@@ -7,7 +7,7 @@ function Notifications() {
   return (
     <div className="Notifications">
       <p>Here is the list of notifications</p>
-      <ul>
+      <ul style={{position: 'relative'}}>
         <li data-priority='default'>New course available</li>
         <li data-priority='urgent'>New resume available</li>
         <li data-priority='urgent' dangerouslySetInnerHTML={{__html: getLatestNotification()}}></li>
@@ -24,7 +24,7 @@ const buttonClick = () => {
 }
 
 const buttonStyle = {
-  position: 'fixed',
+  position: 'absolute',
   top: '1em',
   right: '1em',
   background: 'transparent',
