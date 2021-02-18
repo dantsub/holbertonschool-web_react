@@ -4,8 +4,9 @@
 }
 
 .Notifications {
-  border: 1px dashed #E0434C;
+  border: 3px dashed #E0434C;
   padding: 2rem;
+  margin-bottom: 1rem;
 }
 ul li[data-priority='default'] {
   color: var(--color-blue);
