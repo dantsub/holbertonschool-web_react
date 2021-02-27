@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import { expect } from 'chai';
 import Notifications from './Notifications';
+import NotificationItem from './NotificationItem';
 
 describe('Test Notification.js', () => {
   it('Notification without crashing', (done) => {
@@ -12,13 +13,13 @@ describe('Test Notification.js', () => {
   it('renders three list items', (done) => {
     const wrapper = shallow(<Notifications />);
     expect(wrapper.find('ul')).to.have.lengthOf(1);
-    expect(wrapper.find('li')).to.have.lengthOf(3);
+    expect(wrapper.find(NotificationItem)).to.have.lengthOf(3);
     done();
   });
 
-  it(' renders the text "Here is the list of notifications"', (done) => {
+  it('renders the right html', (done) => {
     const wrapper = shallow(<Notifications />);
-    expect(wrapper.contains(<body className='App-body' />))
+    expect(wrapper.find(NotificationItem).first().html()).to.eq('<li data-notification-type="default">New course available</li>');
     done();
   });
 });
