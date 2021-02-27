@@ -4,14 +4,16 @@
 }
 
 .Notifications {
-  border: 3px dashed #E0434C;
+  border: 2px dashed #E0434C;
   padding: 2rem;
   margin-bottom: 1rem;
+}
+li {
+  margin-left: 2.5rem;
 }
 ul li[data-priority='default'] {
   color: var(--color-blue);
 }
-
 ul li[data-priority='urgent'] {
   color: var(--color-red);
 }

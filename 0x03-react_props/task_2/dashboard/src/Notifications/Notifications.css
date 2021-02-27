@@ -8,6 +8,9 @@
   padding: 2rem;
   margin-bottom: 1rem;
 }
+li {
+  margin-left: 2.5rem;
+}
 ul li[data-notification-type='default'] {
   color: var(--color-blue);
 }

@@ -12,7 +12,7 @@ function Notifications() {
         <li data-priority='urgent'>New resume available</li>
         <li data-priority='urgent' dangerouslySetInnerHTML={{__html: getLatestNotification()}}></li>
       </ul>
-      <button onClick={buttonClick()} aria-label="Close" style={buttonStyle}>
+      <button onClick={() => buttonClick()} aria-label="Close" style={buttonStyle}>
         <img alt="close icon" src={close_icon} style={imageStyle}/>
       </button>
     </div>
@@ -32,8 +32,8 @@ const buttonStyle = {
 }
 
 const imageStyle = {
-  width: '20px',
-  height: '20px',
+  width: '.7rem',
+  height: '.7rem',
 }
 
 export default Notifications;
