@@ -30,7 +30,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    document.addEventListener('keydown', this.handleLogOut);
+    window.addEventListener("keydown", this.handleLogOut);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("keydown", this.handleLogOut);
   }
 
   handleLogOut(event) {
