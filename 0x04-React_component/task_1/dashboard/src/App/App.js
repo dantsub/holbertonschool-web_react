@@ -38,7 +38,8 @@ class App extends Component {
   }
 
   handleLogOut(event) {
-    if (event.keyCode === 72 && event.ctrlkey) {
+    if (event.ctrlKey && event.key === 'h') {
+      event.preventDefault();
       alert('Logging you out');
       this.props.logOut();
     }
