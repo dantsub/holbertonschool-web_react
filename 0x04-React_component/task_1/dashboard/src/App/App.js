@@ -24,11 +24,16 @@ const listNotifications = [
 ];
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.handleLogOut = this.handleLogOut.bind(this);
+  }
+
   componentDidMount() {
     document.addEventListener('keydown', this.handleLogOut);
   }
 
-  handleLogOut = (event) => {
+  handleLogOut(event) {
     if (event.keyCode === 72 && event.ctrlkey) {
       alert('Logging you out');
       this.props.logOut();
