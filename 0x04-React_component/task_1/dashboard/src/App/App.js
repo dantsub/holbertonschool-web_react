@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 /* Components */
 import Login from '../Login/Login';
 import Header from '../Header/Header';
@@ -23,7 +23,7 @@ const listNotifications = [
   { id: 3, type: 'urgent', html: { __html: getLatestNotification()} }
 ];
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.handleLogOut = this.handleLogOut.bind(this);
