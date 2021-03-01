@@ -69,7 +69,7 @@ App.propTypes = {
 
 App.defaultProps = {
   isLoggedIn: false,
-  logOut: () => undefined,
+  logOut: () => void(0),
 };
 
 export default App;
