@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 /* Components */
 import Login from '../Login/Login';
 import Header from '../Header/Header';
@@ -23,7 +23,7 @@ const listNotifications = [
   { id: 3, type: 'urgent', html: { __html: getLatestNotification()} }
 ];
 
-class App extends React.Component {
+class App extends Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
