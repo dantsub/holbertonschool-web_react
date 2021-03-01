@@ -30,7 +30,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("keydown", this.handleClick);
+    document.addEventListener("keydown", this.handleClick);
   }
 
   componentWillUnmount() {
