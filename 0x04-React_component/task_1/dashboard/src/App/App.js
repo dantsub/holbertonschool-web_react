@@ -7,7 +7,7 @@ import CourseList from '../CourseList/CourseList';
 import Notifications from '../Notifications/Notifications';
 import { getLatestNotification } from '../utils/utils';
 /* Proptypes */
-import { bool, func } from 'prop-types';
+import PropTypes from 'prop-types';
 /* Styles */
 import './App.css';
 
@@ -31,10 +31,6 @@ class App extends React.Component {
 
   componentDidMount() {
     document.addEventListener("keydown", this.handleClick);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("keydown", this.handleClick);
   }
 
   handleClick(event) {
@@ -63,8 +59,8 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  isLoggedIn: bool,
-  logOut: func,
+  isLoggedIn: PropTypes.bool,
+  logOut: PropTypes.func,
 };
 
 App.defaultProps = {
