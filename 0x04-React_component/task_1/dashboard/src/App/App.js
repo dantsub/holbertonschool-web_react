@@ -26,18 +26,18 @@ const listNotifications = [
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.handleLogOut = this.handleLogOut.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
-    window.addEventListener("keydown", this.handleLogOut);
+    window.addEventListener("keydown", this.handleClick);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("keydown", this.handleLogOut);
+    window.removeEventListener("keydown", this.handleClick);
   }
 
-  handleLogOut(event) {
+  handleClick(event) {
     if (event.ctrlKey && event.key === 'h') {
       event.preventDefault();
       alert('Logging you out');
