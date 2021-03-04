@@ -1,6 +1,6 @@
 import React from 'react';
-import { mount } from 'enzyme';
-import { expect } from 'chai';
+import { shallow, mount } from 'enzyme';
+import { expect as expectChai } from 'chai';
 import WithLogging from './WithLogging';
 import Login from '../Login/Login';
 

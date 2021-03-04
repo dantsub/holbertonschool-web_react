@@ -4,11 +4,9 @@ import PropTypes from 'prop-types';
 class NotificationItem extends PureComponent {
   render () {
     const { type, value, html, markAsRead, id } = this.props;
-    return(
-      <li data-notification-type={ type } onClick={() => markAsRead(id) } dangerouslySetInnerHTML={ html }>
-        { value }
-      </li>
-    );
+    const list = value ? (<li data-notification-type={ type } onClick={() => markAsRead(id) }>{ value }</li>) :
+    (<li data-notification-type={ type } onClick={() => markAsRead(id) } dangerouslySetInnerHTML={ html }></li>)
+    return(list);
   }
 }
 
