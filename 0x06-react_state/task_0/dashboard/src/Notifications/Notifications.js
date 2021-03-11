@@ -41,7 +41,7 @@ class Notifications extends React.Component {
       <div className={css(style.notificationContainer, style.mediumNotificationContainer)}>
         <div className={css(style.menuItem, displayDrawer ? style.hideElement: '')}
              id="menuItem"
-             onClick={ handleDisplayDrawer }
+             onClick={handleDisplayDrawer}
         >Your notifications</div>
         { displayDrawer ?
           (<div className={css(style.notifications, style.mediumNotification)} id="notifications">
