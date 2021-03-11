@@ -62,7 +62,8 @@ describe('Test App.js', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.state().displayDrawer).toEqual(false);
 
-    wrapper.instance().handleDisplayDrawer();
+    const instance = wrapper.instance();
+    instance.handleDisplayDrawer();
     expect(wrapper.state().displayDrawer).toEqual(true);
   });
 
