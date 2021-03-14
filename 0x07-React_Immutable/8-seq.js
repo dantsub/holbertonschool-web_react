@@ -6,7 +6,7 @@ function capitalize(str) {
 
 export default function printBestStudents(grades) {
   const students = Seq(grades)
-    .filter((student) => student.score < 70)
+    .filter((student) => student.score > 70)
     .map((student) => {
       const { firstName, lastName } = student;
       return {
