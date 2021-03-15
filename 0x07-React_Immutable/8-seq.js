@@ -5,7 +5,9 @@ function capitalize(str) {
 }
 
 export default function printBestStudents(grades) {
-  const students = Seq(grades)
+  const students = Seq(grades);
+
+  console.log(students
     .filter((student) => student.score > 70)
     .map((student) => {
       const { firstName, lastName } = student;
@@ -14,6 +16,6 @@ export default function printBestStudents(grades) {
         firstName: capitalize(firstName),
         lastName: capitalize(lastName),
       };
-    });
-  students.forEach((student) => console.log(student));
+    })
+    .toJS());
 }
