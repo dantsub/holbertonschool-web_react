@@ -6,6 +6,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 module.exports = {
   entry: "./js/main.ts",
   devtool: "inline-source-map",
+  mode: "development",
   module: {
     rules: [
       {
@@ -21,7 +22,9 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
-    contentBase: "./dist"
+    static: {
+      directory: path.join(__dirname, "dist")
+    }
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
