@@ -6,9 +6,6 @@ module.exports = {
   mode: 'development',
   entry: {
     all: ["./modules/header/header.js", "./modules/body/body.js", "./modules/footer/footer.js"],
-    /*header: './modules/header/header.js',
-    body: './modules/body/body.js',
-    footer: './modules/footer/footer.js'*/
   },
   performance: {
     maxAssetSize: 1000000,
@@ -20,9 +17,12 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, './public'),
+    static: {
+      directory: path.join(__dirname, 'public')
+    },
     compress: true,
     port: 8564,
+    open: true,
   },
   plugins: [
     new CleanWebpackPlugin(),
@@ -39,15 +39,10 @@ module.exports = {
       }, 
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              bypassOnDebug: true,
-              disable: true,
-            },
-          },
-        ],
+        type: 'asset/resource',
+        generator: {
+          filename:'assets/[name][ext]'
+        }
       },
     ]
   },

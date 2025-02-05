@@ -22,15 +22,7 @@ module.exports = {
       }, 
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              bypassOnDebug: true,
-              disable: true,
-            },
-          },
-        ],
+        type: 'asset/resource',
       },
     ]
   },
