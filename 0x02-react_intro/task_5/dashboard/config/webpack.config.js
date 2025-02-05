@@ -9,10 +9,15 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
+    static: {
+      directory: path.join(__dirname, 'public')
+    },
     hot: true,
-    contentBase: path.resolve('./dist'),
     compress: true,
     port: 8564,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -27,15 +32,7 @@ module.exports = {
       },
       {
         test: /\.(gif|png|jpe?g|svg)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              bypassOnDebug: true, // webpack@1.x
-              disable: true, // webpack@2.x and newer
-            },
-          },
-        ],
+        type: 'asset/resource',
       },
     ],
   },
