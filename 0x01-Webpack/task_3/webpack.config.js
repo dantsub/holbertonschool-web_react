@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -13,6 +12,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
+    clean: true,
     path: path.resolve(__dirname, "public")
   },
   devtool: 'inline-source-map',
@@ -25,7 +25,6 @@ module.exports = {
     open: true,
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin(),
   ],
   module: {
