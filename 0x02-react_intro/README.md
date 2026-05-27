@@ -2,13 +2,13 @@
 
 ## Description
 
-What you should learn from this project:
+Basic application to learn how react works, this app was initialized with create-react-app but this tool is deprecated so this project was updated with vite but task 5 it about create react project with webpack it the only task without vite.
 
 ---
 
 ### [0. Basic application](./task_0/dashboards/src/)
 
-* Create a basic app named dashboard using create-react-app in your task_0 directory
+* Create a basic app named dashboard using create-react-app in your task_0 directory (updated with vite)
 
 ### [1. Embedding expressions, functions](./task_1/dashboard/src/)
 
@@ -30,15 +30,15 @@ What you should learn from this project:
 
 *
 Install Enzyme with npm
-Create a file named setupTests.js and configure the adapter for Enzyme
+Create a file named setupTests.js and configure the adapter for Enzyme (this part was remove and update tests with vitest)
 
 ### [6. Create React tests](./task_3/dashboard/src/App.test.js)
 
-* in task_3/dashboard/src/App.test.js create four tests:
+* in task_3/dashboard/src/App.test.js (it was updated with vitest)
 
 ### [7. Deploy to a Github page](./task_4/)
 
-* Deploy your application to GitHub Pages using gh-pages branch and create-react-app
+* Deploy your application to GitHub Pages using gh-pages branch and create-react-app (it was removed)
 
 ### [8. Create a project using Webpack](./task_5/dashboard/config/webpack.config.js)
 
@@ -57,7 +57,7 @@ Import the files that you wrote in the previous task. All the Javascript and Rea
 
 ### [11. Testing](./task_5/dashboard/config/setupTests.js)
 
-* Install Jest and Enzyme to run your test suites
+* Install Jest and Enzyme to run your test suites (it was replace with vitest)
 
 ---
 

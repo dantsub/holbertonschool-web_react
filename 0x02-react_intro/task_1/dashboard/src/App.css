@@ -8,6 +8,9 @@
 
 .App {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 84px);
 }
 .App-header {
   border-bottom: 3px solid #E0434C;
@@ -17,8 +20,7 @@
   width: 100%;
 }
 .App-header img {
-  height: 200px;
-  width: 200px;
+  height: stretch;
 }
 .App-header h1 {
   color: #E0434C;
@@ -26,8 +28,8 @@
   font-size: 2rem;
 }
 .App-body {
-  margin-top: 4rem;
-  height: calc(100vh - 7rem - 162px);
+  padding-top: 4rem;
+  flex-grow: 1;
 }
 .App-body p {
   margin-left: 3rem;
