@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
@@ -11,10 +10,13 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader',
-        options: {
-          transpileOnly: true
-        }
+        use: {
+          loader: 'ts-loader',
+          options: {
+            transpileOnly: true
+          }
+        },
+        exclude: /node_modules/
       }
     ]
   },
@@ -22,19 +24,20 @@ module.exports = {
     extensions: [".tsx", ".ts", ".js"]
   },
   devServer: {
+    open: true,
     static: {
       directory: path.join(__dirname, "dist")
     }
   },
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: "Development"
     })
   ],
   output: {
     filename: "bundle.js",
+    clean: true,
     path: path.resolve(__dirname, "dist")
   }
 };
