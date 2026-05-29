@@ -1,0 +1,13 @@
+.App-footer {
+  border-top: 3px solid #E0434C;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  height: 3rem;
+  width: 100%;
+}
+#contactUs {
+  color: #E0434C;
+}
