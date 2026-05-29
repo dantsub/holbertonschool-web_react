@@ -1,0 +1,33 @@
+.login-container {
+    margin-block: 2rem;
+}
+
+input, label {
+    margin: 0;
+}
+
+label {
+    display: block;
+}
+
+input {
+    display: block;
+    margin-block: .5rem;
+}
+
+
+
+@media (min-width: 768px) {
+    input {
+        display: inline;
+        margin: 0 1rem;
+        padding: .2rem 0;
+    }
+    label:first-of-type {
+        margin-left: 3rem;
+    }
+    label {
+        display: inline;
+        margin-block: 0;
+    }
+}

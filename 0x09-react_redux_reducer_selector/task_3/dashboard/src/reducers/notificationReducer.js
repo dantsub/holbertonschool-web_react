@@ -1,4 +1,4 @@
-import { FETCH_NOTIFICATIONS_SUCCESS, MARK_AS_READ, SET_TYPE_FILTER } from '../actions/notificationActionTypes';
+import { FETCH_NOTIFICATIONS_SUCCESS, MARK_AS_READ, SET_TYPE_FILTER } from '@/actions/notificationActionTypes';
 
 export const initialState = {
   notifications: [],
@@ -6,7 +6,7 @@ export const initialState = {
 };
 
 export const notificationReducer = (state = initialState, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case FETCH_NOTIFICATIONS_SUCCESS:
       return {
         ...state,
