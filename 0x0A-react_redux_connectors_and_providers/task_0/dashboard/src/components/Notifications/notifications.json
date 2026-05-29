@@ -1,0 +1,22 @@
+{
+    "notifications": [
+        {
+            "id": 1,
+            "message": "New course available",
+            "type": "default",
+            "isDanger": false
+        },
+        {
+            "id": 2,
+            "message": "New resume available",
+            "type": "urgent",
+            "isDanger": false
+        },
+        {
+            "id": 3,
+            "message": "",
+            "type": "urgent",
+            "isDanger": true
+        }
+    ]
+}
