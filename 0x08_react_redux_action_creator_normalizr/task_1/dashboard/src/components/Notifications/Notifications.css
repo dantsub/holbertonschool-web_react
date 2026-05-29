@@ -1,0 +1,76 @@
+:root {
+  --color-blue: #0000ff;
+  --color-red: #ff0000;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Notifications {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  right: 0;
+}
+
+.Notifications.visible {
+  background-color: white;
+  height: 100vh;
+  padding: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.Notifications:not(.visible) p:hover {
+  cursor: pointer;
+  animation: bounce 0.5s infinite,
+             opacity 0.5s infinite;
+}
+
+.Notifications.visible p {
+  margin: 1rem 0;
+  font-size: 20px;
+}
+
+.menuItem {
+  text-align: right;
+  margin-right: .5rem;
+}
+
+ul {
+  font-size: 20px;
+  list-style: none;
+}
+
+li {
+  padding: 10px 8px;
+  border-bottom: 1px solid black;
+}
+
+ul li[data-notification-type='default'] {
+  color: var(--color-blue);
+}
+
+ul li[data-notification-type='urgent'] {
+  color: var(--color-red);
+}
